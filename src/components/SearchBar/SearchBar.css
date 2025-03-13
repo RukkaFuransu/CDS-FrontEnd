@@ -1,0 +1,16 @@
+.search-bar {
+    width: 250px; /* Tamanho fixo para a barra lateral */
+    padding: 8px 10px; /* Aumenta um pouco o padding para tornar a barra mais confortável */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Ajuste do tamanho da fonte */
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Cor do texto */
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno */
+  }
+  

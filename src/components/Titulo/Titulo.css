@@ -1,0 +1,11 @@
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinhar à esquerda */
+    margin-bottom: 50px;
+    margin-left: 500px; /* Ajuste conforme necessário */
+  }
+  
+  .titulo h1 {
+    margin: 0;
+  }

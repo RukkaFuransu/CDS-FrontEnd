@@ -1,0 +1,45 @@
+stages:
+  - deploy
+  - build
+
+variables:
+  VM_HOST: "192.168.8.22"
+  VM_USER: "admaudaces"
+  VM_PATH: "/home/admaudaces/custos-de-licenças/custos-front"
+
+image: alpine:latest
+
+before_script:
+  - apk update && apk add --no-cache sshpass openssh
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Iniciando a transferência de arquivos..."
+    - sshpass -p "$VM_PASSWORD" scp -o StrictHostKeyChecking=no -r * $VM_USER@$VM_HOST:$VM_PATH
+    - echo 'Arquivos transferidos com sucesso.'
+    - echo 'Conectando com o usuário:' && whoami
+  when: manual
+  only:
+    - main
+  tags:
+    - docker-runner-ti
+
+build:
+  stage: build
+  script:
+    - echo "Iniciando o build no servidor remoto..."
+    - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no $VM_USER@$VM_HOST "
+        echo 'Conectando com o usuário:' && whoami &&
+        cd \"$VM_PATH\" &&
+        docker build -t frontcustos:dev . &&
+        cd /home/admaudaces/custos-de-licenças &&
+        docker-compose down &&
+        docker-compose up -d
+      "
+    - echo 'Build e deploy realizados com sucesso.'
+  when: manual
+  only:
+    - main
+  tags:
+    - docker-runner-ti

@@ -1,0 +1,57 @@
+.Custos {
+  position: fixed;
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.188);
+  padding: 20px;
+  margin-top: 30px;
+  margin-left: -650px;
+  height: 855px; /* Altura fixa */
+  overflow-y: scroll; /* Mudado de auto para scroll para sempre exibir a barra */
+}
+
+
+/* Barra de rolagem minimalista */
+.Custos::-webkit-scrollbar {
+  width: 6px;  /* Largura da barra de rolagem vertical */
+  height: 6px; /* Largura da barra de rolagem horizontal */
+}
+
+/* Cor e estilo da parte da barra que interage com o usuário */
+.Custos::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);  /* Cor mais sutil */
+  border-radius: 3px;  /* Bordas arredondadas */
+  border: 2px solid transparent;  /* Espaço transparente ao redor do thumb */
+}
+
+/* Cor do fundo da barra de rolagem */
+.Custos::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);  /* Cor do fundo */
+  border-radius: 3px;
+}
+
+
+
+.botao-csv {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute; /* Use absolute positioning */
+  top: 162px; /* Ajuste conforme necessário */
+  right: 1050px; /* Ajuste conforme necessário */
+  width: 126px; /* Defina uma largura fixa */
+}
+
+.botao-csv:hover {
+  background-color: #0056b3;
+}
+
+.botao-csv:focus {
+  outline: none;
+  background-color: #0056b3;
+}

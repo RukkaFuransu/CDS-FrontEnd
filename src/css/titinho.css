@@ -1,0 +1,26 @@
+.titinho {
+    position: relative; /* Ou absolute, se necessário */
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.288);
+    padding: 15px;
+    text-align: left;
+    left: 500px; /* Move 50px para a direita */
+    top: 100px; /* Move 50px para a direita */
+    /* Ou */
+    /* right: 50px; */ /* Move 50px para a esquerda */
+    transition: transform 0.3s ease;
+  }
+  
+  .titinho img {
+    max-width: 100%;          /* Limita a largura da imagem */
+    height: auto;            /* Mantém a proporção da imagem */
+    object-fit: contain;     /* Garante que a imagem não seja cortada */
+  }
+  
+
+  .Titinho:hover {
+    transform: scale(1.05);
+  }
+

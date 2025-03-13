@@ -1,0 +1,112 @@
+.user-costs {
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    top: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.288);
+    padding: 25px;
+    text-align: left; /* Alinha o conteúdo de texto para a direita */
+    transition: transform 0.3s ease;
+  }
+  
+  .user-costs:hover {
+    transform: scale(1.05);
+  }
+  
+  .user-costs h2 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: #2C3E50;
+    margin-bottom: 10px;
+  }
+  
+  .user-costs p {
+    font-size: 1rem;
+    color: #7F8C8D;
+    text-align: left; /* Alinha o parágrafo à direita */
+  }
+  
+
+  .total-microsoft-box {
+    position: absolute;
+    top:70px; /* Distância do topo do container */
+    width: 380px; /* Largura fixa */
+    right: 5px; /* Distância da borda direita do container */
+    background-color: #f0f0f000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    z-index: 10; /* Garante que a caixa fique acima de outros elementos */
+  }
+  
+  .total-microsoft-box p {
+    margin: 0;
+    text-align: left; /* Garantir alinhamento à esquerda */
+    display: block; /* Garantir que o <p> ocupe toda a largura disponível */
+  }
+
+  .total-zendesk-box {
+    position: absolute;
+    top: 125px; /* Distância do topo do container */
+    width: 380px; /* Largura fixa */
+    right: 5px; /* Distância da borda direita do container */
+    background-color: #f0f0f000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    z-index: 10; /* Garante que a caixa fique acima de outros elementos */
+  }
+  
+  .total-zendesk-box p {
+    margin: 0;
+    text-align: left; /* Garantir alinhamento à esquerda */
+    display: block; /* Garantir que o <p> ocupe toda a largura disponível */
+  }
+
+  .total-cost-box {
+    position: absolute;
+    top:15px; /* Distância do topo do container */
+    width: 380px; /* Largura fixa */
+    right: 5px; /* Distância da borda direita do container */
+    background-color: #f0f0f000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    z-index: 10; /* Garante que a caixa fique acima de outros elementos */
+  }
+  
+  .total-cost-box p {
+    margin: 0;
+    text-align: left; /* Garantir alinhamento à esquerda */
+    display: block; /* Garantir que o <p> ocupe toda a largura disponível */
+  }
+  
+  .zendesk-cost {
+    margin-top: 15px; /* Separa o texto Zendesk do anterior */
+  }
+  
+  .zendesk-label {
+    color: #007BFF; /* Altere a cor do texto 'Zendesk' (exemplo: azul) */
+    font-weight: bold; /* Deixa em negrito */
+  }
+  
+
+  .user-count {
+    position: absolute;
+    width: 145px;
+    top: 10px;
+    right: 1135px;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start; /* Alinha o texto à esquerda */
+    align-items: center; /* Centraliza o texto verticalmente */
+    padding: 5px 10px; /* Ajuste de espaçamento interno */
+    min-width: 50px; /* Evita que o container fique muito pequeno */
+}
+
+.user-count span {
+    white-space: nowrap; /* Impede quebra de linha no texto */
+}
+
+  

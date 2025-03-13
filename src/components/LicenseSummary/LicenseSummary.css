@@ -1,0 +1,94 @@
+/* Estilo inicial */
+.license-summary {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 170px;
+    right: 285px;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.137);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100px;
+    min-height: 45px;
+    max-height: 45px; /* Começa com altura menor */
+    opacity: 1; /* Visível quando minimizado */
+    transform: translateX(0); /* Começa em sua posição original */
+    transition: all 0.8s ease; /* Transição suave para todas as propriedades */
+}
+
+/* Estilo quando expandido */
+.license-summary.expanded {
+    right: 5px;
+    width: 380px;
+    max-height: 500px; /* Permite a expansão */
+    overflow-y: scroll;
+    transform: translateX(0); /* Mantém na posição original */
+    opacity: 1; /* Torna visível */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais sutil ao expandir */
+}
+
+/* Estilo quando minimizado */
+.license-summary.minimized {
+    right: 285px;
+    width: 100px;
+    max-height: 45px; /* Volta à altura menor */
+    overflow-y: hidden;
+    transform: translateX(0); /* Mantém na posição original */
+    opacity: 1; /* Torna visível */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.137); /* Sombra original */
+}
+/* Scrollbar */
+.license-summary::-webkit-scrollbar {
+    width: 4px; /* Largura fixa da barra de rolagem */
+    height: 4px; /* Altura fixa da barra de rolagem horizontal (caso exista) */
+}
+
+.license-summary::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.171); /* Cor da barra */
+    border-radius: 20px; /* Bordas arredondadas */
+    height: 30px; /* Altura mínima da "thumb" da barra de rolagem */
+}
+
+.license-summary::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05); /* Fundo da barra */
+    border-radius: 20px;
+}
+
+.license-summary button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #a7a7a7;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none; /* Remove o contorno ao clicar */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor e transformação */
+}
+
+.license-summary button:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.license-summary button.active {
+    color: #007bff; /* Cor mais escura do texto ao clicar */
+}
+
+.license-summary-item {
+    font-size: 10px;
+    padding: 5px 0;
+    width: 100%; /* Garante que o conteúdo use toda a largura disponível */
+}
+
+.license-summary-item p {
+    margin: 0;
+    text-align: left; /* Garantir alinhamento à esquerda */
+    font-size: 12px;
+    display: block; /* Garantir que o <p> ocupe toda a largura disponível */
+}

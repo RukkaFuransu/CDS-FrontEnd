@@ -1,0 +1,284 @@
+/* Alinha os itens do filtro e do preset */
+.department-item,
+.preset-item {
+  display: flex; /* Flex para organizar os itens */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px; /* Espaço entre a caixa e o texto */
+  background-color: #f8f8f8;
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 4px;
+  padding: 4px 8px; /* Padding menor */
+  cursor: pointer;
+  font-size: 12px; /* Fonte menor */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição de sombra */
+  margin-bottom: 8px; /* Espaçamento entre os itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor da caixa */
+}
+
+
+/* Alinha as caixas de seleção no início */
+.job-item input[type="checkbox"],
+.department-item input[type="checkbox"],
+.preset-item input[type="checkbox"] {
+  flex-shrink: 0; /* Evita que o checkbox encolha */
+  margin: 0; /* Remove margem padrão */
+  cursor: pointer;
+}
+
+/* Texto ao lado do checkbox */
+.job-item span,
+.department-item span,
+.preset-item span {
+  flex-grow: 1; /* O texto ocupa o espaço restante */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #333; /* Cor padrão do texto */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  text-overflow: ellipsis; /* Adiciona reticências ao texto truncado */
+  font-size: 12px; /* Garante que o tamanho do texto permaneça constante */
+  font-weight: normal; /* Mantém o peso do texto normal */
+}
+
+/* Hover no item */
+.job-item:hover,
+.department-item:hover,
+.preset-item:hover {
+  background-color: #007bff;
+  color: white; /* O texto muda de cor no hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+/* Texto ao selecionar o checkbox */
+
+.job-item input[type="checkbox"]:checked + span,
+.department-item input[type="checkbox"]:checked + span,
+.preset-item input[type="checkbox"]:checked + span {
+  color: #333; /* Mantém uma cor visível mesmo quando selecionado */
+  font-weight: normal; /* Não altera o peso do texto */
+}
+
+/* Texto ao passar o mouse no item selecionado */
+.job-item input[type="checkbox"]:checked:hover + span,
+.department-item input[type="checkbox"]:checked:hover + span,
+.preset-item input[type="checkbox"]:checked:hover + span {
+  color: white; /* Texto fica branco para combinar com o hover */
+}
+
+/* Estilização do filtro flutuante */
+.floating-filter {
+  position: fixed;
+  top: 6%; /* Ajusta a posição do topo para um bom alinhamento */
+  left: 60px; /* Distância da esquerda */
+  background-color: white;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  z-index: 1000; /* Aumenta o z-index para garantir que fique à frente de outros elementos */
+  width: 220px; /* Largura maior para melhor exibição */
+  max-height: 300px; /* Limite de altura */
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  overflow-x: hidden; /* Desabilita a rolagem horizontal */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Desabilita a interação quando invisível */
+  direction: rtl; /* Define a direção da rolagem para a direita para esquerda */
+}
+
+/* Barra de rolagem minimalista */
+.floating-filter::-webkit-scrollbar {
+  width: 6px;  /* Largura da barra de rolagem vertical */
+}
+
+/* Cor e estilo da parte da barra que interage com o usuário */
+.floating-filter::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);  /* Cor mais sutil */
+  border-radius: 3px;  /* Bordas arredondadas */
+  border: 2px solid transparent;  /* Espaço transparente ao redor do thumb */
+}
+
+/* Cor do fundo da barra de rolagem */
+.floating-filter::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);  /* Cor do fundo */
+  border-radius: 3px;
+}
+
+/* Ajusta o conteúdo para a direção correta */
+.floating-filter > * {
+  direction: ltr; /* Define a direção do conteúdo de volta para esquerda para direita */
+}
+
+/* Define um tamanho fixo para a barra de rolagem */
+.floating-filter::-webkit-scrollbar {
+  width: 6px;  /* Largura fixa da barra de rolagem vertical */
+  height: 6px; /* Largura fixa da barra de rolagem horizontal */
+}
+/* Ativa o filtro flutuante */
+.floating-filter.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Habilita a interação quando visível */
+}
+
+/* Ajuste para garantir que o filtro tenha uma boa visualização em dispositivos móveis */
+@media (max-width: 768px) {
+  .floating-filter {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.filter-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 0px; /* Adiciona uma margem à esquerda */
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+}
+
+.filter-button:focus {
+  outline: none;
+  background-color: #0056b3;
+}
+
+
+.filter-licenças {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 11px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 580px;
+  right: 1181px;
+}
+
+.filter-licenças:hover {
+  background-color: #0056b3;
+}
+
+.filter-licenças:focus {
+  outline: none;
+  background-color: #0056b3;
+}
+
+
+.pesquisa {
+  width: 100%;
+  padding: 4px;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff; /* Adiciona o fundo branco */
+  color: #333; /* Garante que o texto tenha uma cor visível */
+}
+
+
+/* Botão + / - */
+.expand-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.expand-button:hover {
+  color: #0056b3;
+}
+
+/* Subníveis dos departamentos */
+.department-sublevel {
+  padding-left: 20px; /* Recuo para mostrar a hierarquia */
+  border-left: 20px solid #ddd;
+  margin-left: 20px;
+}
+
+
+.floating-filter.active {
+  display: block;
+}
+
+
+.expanded-departments {
+  margin-left: 30px;
+}
+
+
+/* Estilo para cada cargo individual */
+.job-container {
+  display: flex; /* Flex para organizar os itens */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px; /* Espaço entre a caixa e o texto */
+  background-color: #f8f8f8;
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 4px;
+  padding: 4px 8px; /* Padding menor */
+  cursor: pointer;
+  font-size: 12px; /* Fonte menor */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição de sombra */
+  margin-bottom: 8px; /* Espaçamento entre os itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor da caixa */
+}
+.job-item {
+  gap: 8px; /* Adiciona espaçamento entre a checkbox e o texto */
+}
+
+/* Estilo para a transição suave */
+.expanded-departments, .expanded-jobs {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleY(1);
+  transition: max-height 0.8s ease-out, opacity 0.8s ease-out, transform 0.8s ease-out; /* Use 'ease-out' para um efeito de desaceleração suave */
+}
+
+.expanded-departments.active, .expanded-jobs.active {
+  max-height: 1000px; /* Ajuste para um valor que seja suficiente para o conteúdo */
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+
+.office-container {
+  display: flex; /* Flex para organizar os itens */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px; /* Espaço entre a caixa e o texto */
+  background-color: #f8f8f8;
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 4px;
+  padding: 4px 8px; /* Padding menor */
+  cursor: pointer;
+  font-size: 12px; /* Fonte menor */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição de sombra */
+  margin-bottom: 8px; /* Espaçamento entre os itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor da caixa */
+  margin-left: -40px; /* Ajuste a margem para mover a caixa para a esquerda */
+}
+
+.office-item {
+  gap: 8px; /* Adiciona espaçamento entre a checkbox e o texto */
+}
+
+
+
+
+.expand-symbol {
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.office-item input[type="checkbox"] {
+  margin-right: 0px;
+}

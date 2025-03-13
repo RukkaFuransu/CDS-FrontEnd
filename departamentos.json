@@ -1,0 +1,41 @@
+{
+  "departmentPresets": [
+    {
+      "name": "Sem departamento",
+      "departments": ["Não informado"]
+    },
+    {
+      "name": "Interno",
+      "departments": [
+        "TI", "TI.Sistemas", "Novos Negócios", "Controladoria", "Vendas corporativas", "Vendas sala de corte", "Supply chain", "Astec Comercial", 
+        "Compras", "Controladoria", "Inside Sales", "Astec", "Engenharia", "Instrutor.Audaces", "Vendas Sala de Corte", "P&D", "Produção", 
+        "Suporte", "Marketing", "Vendas", "CX", "SAC", "Operação de vendas", "Operações de Vendas", "ASTEC", "Supply Chain", "RH", "Vendas LATAM",
+         "supply chain", "Operações de Vendas", "Controladoria", "Qualidade", "Operação de Vendas", "Pré Vendas", "PCP", "Presidência", "Financeiro", 
+         "Vendas Corporativas", "VENDAS SALA DE CORTE", "Projeto Trainee", "Conselho", "ICF", "Gestão do Conhecimento", "Pré vendas", "Teltec", "Diretoria",
+          "Almoxarifado", "Logística", "Processos", "Instrutores", "Serviços", "Operações de Vendas"
+      ]
+    },
+    {
+      "name": "Italia",
+      "departments": ["Itália"]
+    },
+    {
+      "name": "Franqueados Brasil",
+      "departments": [
+        "Franqueado.CVA", "Franqueado.HR", "Franqueado.AL", "Franqueado.NO-NE","Franqueado.Sirez",
+             "Franqueado.RJ-ES", "Franqueado.MG", "Franqueado.PB","Franqueado.RJ", "Franqueado.PE.Master", "Franqueado.Servio", "Franqueado.CE", "Franqueado.Tronic", "Franqueado.Nomaxcorp"
+      ]
+    },
+    {
+      "name": "Distribuidores Latam",
+      "departments": [
+        "Distribuidor.Latam","Distribuidor.COL.Infografix","Distribuidor.USA.Autometrix", "Distribuidor.ARG.Texturar", "Distribuidor.VEN", "Distribuidor.CR",
+         "Distribuidor.ARG", "Distribuidor.CHL", "Distribuidor.VEN.Dextra", "Distribuidor.COL",
+          "Distribuidor.COL.Springer", "Distribuidor.ECU", "Distribuidor.MEX.Texturar",
+           "Distribuidor Colômbia", "Distribuidor", "Distribuidor.BOL", "Distribuidores.Latam", "Distribuidor.MEX",
+            "Distribuidor.MEX.Texturar.Instrutor", "Distribuidor.Infografix.COL", "Distribuidor.SLV", "Distribuidor.PER", "Distribuidor.GTM",
+             "Distribuidor.PRY", "Distribuidor.Texturar", "Distribuidor.Dextra"
+      ]
+    }
+  ]
+}
